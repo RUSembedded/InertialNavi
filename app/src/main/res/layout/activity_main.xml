@@ -1,0 +1,138 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".SensorList"
+    android:divider="@android:color/black"
+    android:id="@+id/layoutList">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_column="0"
+            android:text="Sensor"
+            android:padding="20dip"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_column="1"
+            android:text="Available"
+            android:padding="20dip"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_column="0"
+            android:text="Accelerometer"
+            android:padding="20dip"/>
+
+        <TextView
+            android:layout_column="1"
+            android:text="FALSE"
+            android:id="@+id/AccStatus"
+            android:padding="20dip"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_column="0"
+            android:text="Gyroscope"
+            android:padding="20dip"/>
+
+        <TextView
+            android:layout_column="1"
+            android:text="FALSE"
+            android:id="@+id/GyroStatus"
+            android:padding="20dip"/>
+
+    </TableRow>
+
+    <TableRow
+        android:background="#AAAAAA"
+        android:gravity="center">
+
+        <TextView
+            android:padding="1dip"
+            android:text="Inertialsensorik"
+            android:textAlignment="center"
+            android:id="@+id/textView" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="INIT"
+            android:id="@+id/btnStrapDown"
+            android:layout_column="0"
+            android:onClick="btnCalibrate"
+            android:padding="10dip" />
+
+        <CheckBox
+            android:layout_height="match_parent"
+            android:text="Enable Transformation"
+            android:id="@+id/checkBoxTransform"
+            android:layout_column="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="a_x: "/>
+        <TextView
+            android:text="XXX"
+            android:id="@+id/txtAx"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="a_y: "/>
+        <TextView
+            android:text="XXX"
+            android:id="@+id/txtAy"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="a_z: "/>
+        <TextView
+            android:text="XXX"
+            android:id="@+id/txtAz"/>
+    </TableRow>
+
+
+    <TableRow
+        android:background="#FFFFFF"
+        android:gravity="center">
+
+        <TextView
+            android:padding="1dip"
+            android:text=""
+            android:textAlignment="center" />
+    </TableRow>
+
+
+    <TableRow
+        android:minHeight="300px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SurfaceView
+            android:id="@+id/idSurfaceView"
+            android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </TableRow>
+
+
+</TableLayout>
